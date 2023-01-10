@@ -1,6 +1,6 @@
-import Observer from "./Observer";
-import Model from "./model";
-import observerableModels from "../../../../config/observerableModels";
+import Observer from "vendor/core/observer/database/Observer";
+import Model from "vendor/core/observer/database/model";
+import observerableModels from "config/observerableModels";
 
 class modelObServerAble implements Model {
 

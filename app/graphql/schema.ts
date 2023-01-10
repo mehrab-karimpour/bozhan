@@ -1,6 +1,6 @@
 import {Request, response} from "express";
 import {buildSchema} from 'graphql'
-import logger from "../../config/logger";
+import logger from "config/logger";
 
 export const schema = buildSchema(`
    type Query {

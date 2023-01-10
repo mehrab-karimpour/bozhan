@@ -1,8 +1,8 @@
 import {NextFunction} from "express";
-import {Controller} from "../controller";
-import {injectableServiceProvider} from "../../../providers/injectableServiceProvider";
-import Jwt from "../../../auth/jwt";
-import Auth from "../../../../vendor/core/Auth";
+import {Controller} from "app/http/controllers/controller";
+import {injectableServiceProvider} from "app/providers/injectableServiceProvider";
+import Jwt from "app/auth/jwt";
+import Auth from "vendor/core/Auth";
 
 class LogoutController extends Controller {
 

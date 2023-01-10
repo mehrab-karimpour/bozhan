@@ -1,5 +1,5 @@
 import Queue from "bull";
-import {Container} from "../../../app/providers/AppContainer";
+import {Container} from "app/providers/AppContainer";
 
 let Queues: any = {}
 let queueDriverRedis: any = {

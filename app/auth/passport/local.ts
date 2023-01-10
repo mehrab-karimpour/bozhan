@@ -1,7 +1,7 @@
 import exp from "constants";
 
 const passport = require('passport')
-import db from "../../models/sequelize";
+import db from "app/models/sequelize";
 
 const LocalStrategy = require('passport-local').Strategy
 

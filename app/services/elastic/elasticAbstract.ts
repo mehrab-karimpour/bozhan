@@ -1,5 +1,5 @@
 import {Client} from "@elastic/elasticsearch";
-import elasticConfig from "../../../config/elastic";
+import elasticConfig from "config/elastic";
 
 export default abstract class ElasticAbstract {
 

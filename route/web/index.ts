@@ -1,12 +1,12 @@
-import LoginController from "../../app/http/controllers/auth/LoginController";
+import LoginController from "app/http/controllers/auth/LoginController";
 
 const router = require('express-namespace-routes')
-import {controller, handleErrors, middleware, validate} from "../../vendor/core/autoload/call";
-import RegisterController from "../../app/http/controllers/auth/RegisterController";
-import LoginRequest from "../../app/http/requests/loginRequest";
-import LogoutController from "../../app/http/controllers/auth/LogoutController";
-import RegisterRequest from "../../app/http/requests/registerRequest";
-import IndexController from "../../app/http/controllers/IndexController";
+import {controller, handleErrors, middleware, validate} from "vendor/core/autoload/call";
+import RegisterController from "app/http/controllers/auth/RegisterController";
+import LoginRequest from "app/http/requests/loginRequest";
+import LogoutController from "app/http/controllers/auth/LogoutController";
+import RegisterRequest from "app/http/requests/registerRequest";
+import IndexController from "app/http/controllers/IndexController";
 
 
 router.prefix('/', (route: any) => {

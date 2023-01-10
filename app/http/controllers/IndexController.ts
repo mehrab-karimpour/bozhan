@@ -2,8 +2,8 @@ export {}
 import "reflect-metadata"
 import {Request, Response} from "express"
 import {Controller} from "./controller"
-import {injectableServiceProvider} from '../../providers/injectableServiceProvider'
-import {UserRepository} from "../../repositories/Sequelize/UserRepository"
+import {injectableServiceProvider} from 'app/providers/injectableServiceProvider'
+import {UserRepository} from "app/repositories/Sequelize/UserRepository"
 
 
 class IndexController extends Controller {

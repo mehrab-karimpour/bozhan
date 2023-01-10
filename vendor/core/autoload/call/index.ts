@@ -1,5 +1,5 @@
 import {Container} from "app/providers/AppContainer";
-import storages from "../../fs";
+import storages from "vendor/core/fs";
 
 export function upload(uploadName: string, fileName: Array<string | number> | string) {
 

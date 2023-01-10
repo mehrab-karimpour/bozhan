@@ -1,7 +1,7 @@
 import WebSocket, {createWebSocketStream} from 'ws'
-import {wbConfig} from "../../../config/socket";
-import Socket from "../../../vendor/core/socket/Socket";
-import SocketInterface from "../../../vendor/core/socket/SocketInterface";
+import {wbConfig} from "config/socket";
+import Socket from "vendor/core/socket/Socket";
+import SocketInterface from "vendor/core/socket/SocketInterface";
 
 
 class wb extends Socket implements SocketInterface {

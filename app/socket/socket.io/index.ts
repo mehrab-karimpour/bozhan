@@ -1,7 +1,7 @@
 import * as socketIo from "socket.io"
-import Socket from "../../../vendor/core/socket/Socket"
-import SocketInterface from "../../../vendor/core/socket/SocketInterface"
-import ShouldNotificationInterface from "../../../vendor/core/notification/ShouldNotificationInterface"
+import Socket from "vendor/core/socket/Socket"
+import SocketInterface from "vendor/core/socket/SocketInterface"
+import ShouldNotificationInterface from "vendor/core/notification/ShouldNotificationInterface"
 
 
 class SocketIo extends Socket implements SocketInterface, ShouldNotificationInterface {

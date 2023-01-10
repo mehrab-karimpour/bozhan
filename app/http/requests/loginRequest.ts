@@ -1,6 +1,6 @@
 import {RequestsForm} from "./Requests";
 import {body, validationResult} from 'express-validator'
-import {required, max} from "../../../resources/lang/fa/validation";
+import {required, max} from "resources/lang/fa/validation";
 import {NextFunction, Request, Response} from "express";
 
 

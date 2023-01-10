@@ -1,5 +1,5 @@
-import {ReadInterface, WriteInterface} from "../BaseRepoitoryInterface";
-import logger from "../../../config/logger";
+import {ReadInterface, WriteInterface} from "app/repositories/BaseRepoitoryInterface";
+import logger from "config/logger";
 
 
 export class BaseRepository implements ReadInterface, WriteInterface {

@@ -1,6 +1,6 @@
 import events from "node:events";
-import {injectableServiceProvider} from "../../../app/providers/injectableServiceProvider";
-import {Container} from "../../../app/providers/AppContainer";
+import {injectableServiceProvider} from "app/providers/injectableServiceProvider";
+import {Container} from "app/providers/AppContainer";
 
 class index extends events {
 }

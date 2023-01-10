@@ -1,6 +1,7 @@
 //@ts-ignore
-import {injectableServiceProvider} from "../../app/providers/injectableServiceProvider";
-import registerMiddleware, {middlewareNotFound} from "../../app/http/middleware";
+import {injectableServiceProvider} from "app/providers/injectableServiceProvider";
+// @ts-ignore
+import registerMiddleware, {middlewareNotFound} from "app/http/middleware";
 
 class Call {
 
@@ -23,7 +24,7 @@ class Call {
     public ctlCall = (controller: string) => {
 
         // @ts-ignore
-        const newController = require(`../../app/http/controllers/${controller}`)
+        const newController = require(`app/http/controllers/${controller}`)
         let ctl = new newController();
         console.log('ctl__')
         return ctl;

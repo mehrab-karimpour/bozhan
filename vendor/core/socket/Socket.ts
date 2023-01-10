@@ -1,4 +1,4 @@
-import {defaultChannel} from "../../../config/socket";
+import {defaultChannel} from "config/socket";
 
 class Socket {
     public static channels: any = []

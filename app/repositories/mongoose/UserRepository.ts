@@ -1,5 +1,5 @@
-import {BaseRepository} from "./BaseRepository";
-import UserRepositoryInterface from "../UserRepositoryInterface";
+import {BaseRepository} from "app/repositories/mongoose/BaseRepository";
+import UserRepositoryInterface from "app/repositories/UserRepositoryInterface";
 import user from 'app/models/mongoose/user'
 
 

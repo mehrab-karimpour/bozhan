@@ -1,4 +1,4 @@
-import {Container} from "../../../app/providers/AppContainer";
+import {Container} from "app/providers/AppContainer";
 
 const csv = require('csv-parser')
 const fs = require('fs')

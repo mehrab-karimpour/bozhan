@@ -1,4 +1,8 @@
-require('dotenv').config()
+import appConfig from "config/app";
+
+require('dotenv').config({
+    path: appConfig.envPath()
+})
 
 module.exports = {
     "development": {

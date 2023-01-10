@@ -1,7 +1,7 @@
 import {RequestsForm} from "./Requests";
 import {body, validationResult} from 'express-validator'
-import {required, max, integer, min, alreadyExists} from "../../../resources/lang/fa/validation";
-import db from "../../models/sequelize";
+import {required, max, integer, min, alreadyExists} from "resources/lang/fa/validation";
+import db from "app/models/sequelize";
 import {Model} from "sequelize";
 import {NextFunction, Request, Response} from "express";
 

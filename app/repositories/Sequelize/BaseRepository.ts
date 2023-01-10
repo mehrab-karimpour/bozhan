@@ -1,6 +1,6 @@
-import {ReadInterface, RunObserverInterface, WriteInterface} from "../BaseRepoitoryInterface";
-import logger from "../../../config/logger";
-import modelObServerAble from "../../../vendor/core/observer/database/modelObServerAble";
+import {ReadInterface, RunObserverInterface, WriteInterface} from "app/repositories/BaseRepoitoryInterface";
+import logger from "config/logger";
+import modelObServerAble from "vendor/core/observer/database/modelObServerAble";
 
 
 export abstract class BaseRepository extends modelObServerAble implements ReadInterface, WriteInterface, RunObserverInterface {

@@ -1,8 +1,8 @@
-import {AuthMiddleware} from "../http/middleware/authMiddleware";
-import loginRequest from "../http/requests/loginRequest";
-import {RoleMiddleware} from "../http/middleware/roleMiddleware";
-import {PermissionMiddleware} from "../http/middleware/permissionMiddleware";
-import {agentMiddleware} from "../http/middleware/agentMiddleware";
+import {AuthMiddleware} from "app/http/middleware/authMiddleware";
+import loginRequest from "app/http/requests/loginRequest";
+import {RoleMiddleware} from "app/http/middleware/roleMiddleware";
+import {PermissionMiddleware} from "app/http/middleware/permissionMiddleware";
+import {agentMiddleware} from "app/http/middleware/agentMiddleware";
 
 /**
  * Bozhan container namespace

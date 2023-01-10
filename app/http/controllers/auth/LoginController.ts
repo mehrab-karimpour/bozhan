@@ -1,9 +1,9 @@
 export {}
-import {Controller} from "../controller";
+import {Controller} from "app/http/controllers/controller";
 import {NextFunction, Request, Response} from "express";
-import {UserRepository} from "../../../repositories/mongoose/UserRepository";
-import {injectableServiceProvider} from "../../../providers/injectableServiceProvider";
-import Jwt from "../../../auth/jwt";
+import {UserRepository} from "app/repositories/mongoose/UserRepository";
+import {injectableServiceProvider} from "app/providers/injectableServiceProvider";
+import Jwt from "app/auth/jwt";
 
 const passport = require('passport')
 

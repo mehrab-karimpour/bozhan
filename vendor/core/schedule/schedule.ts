@@ -1,5 +1,5 @@
 import cron from 'node-cron'
-import {Container} from "../../../app/providers/AppContainer";
+import {Container} from "app/providers/AppContainer";
 
 
 export class Schedule {

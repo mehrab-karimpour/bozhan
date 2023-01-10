@@ -1,4 +1,4 @@
-import redis from "../../../app/models/redis/redis";
+import redis from "app/models/redis/redis";
 
 class AuthCache {
 

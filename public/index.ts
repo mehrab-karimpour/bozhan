@@ -1,41 +1,43 @@
 import "reflect-metadata"
 import express, {NextFunction, Request, request, Response, response} from 'express'
-import db from '../app/models/sequelize'
+import db from 'app/models/sequelize'
 import mongoose from "mongoose"
 import bodyParser from "body-parser"
 import appConfig from "config/app"
-import databaseConfig from '../config/database'
-import Passport from "../app/auth/passport"
+import databaseConfig from 'config/database'
+import Passport from "app/auth/passport"
 import Queue from 'bull';
 
 const cookieParser = require('cookie-parser')
 const flash = require('connect-flash')
 const passport = require('passport')
-require('dotenv').config()
+require('dotenv').config({
+    path: appConfig.envPath()
+})
 const session = require('express-session')
 const routeCache = require('route-cache')
 
-import Config from "../vendor/config/Config"
+import Config from "vendor/config/Config"
 import http from 'http'
-import webRouter from '../route/web/index'
-import apiRouter from '../route/api/index'
+import webRouter from 'route/web/index'
+import apiRouter from 'route/api/index'
 import {config} from "dotenv"
-import wb from "../app/socket/ws"
-import SocketIo from "../app/socket/socket.io"
+import wb from "app/socket/ws"
+import SocketIo from "app/socket/socket.io"
 import {graphqlHTTP} from 'express-graphql'
-import {schema, root} from "../app/graphql/schema"
+import {schema, root} from "app/graphql/schema"
 import 'app/models/mongoose/index'
-/*import Graphql from "../app/graphql"*/
+/*import Graphql from "app/graphql"*/
 /*import graphqlHttp from "express-graphql"*/
-import welcome from "../vendor/core/cli/welcome";
-import cli from "../vendor/core/cli/cli";
-import {redisConfig} from "../config/database";
-import {injectableServiceProvider} from "../app/providers/injectableServiceProvider";
+import welcome from "vendor/core/cli/welcome";
+import cli from "vendor/core/cli/cli";
+import {redisConfig} from "config/database";
+import {injectableServiceProvider} from "app/providers/injectableServiceProvider";
 import * as redis from 'redis';
-import declares from "../app/@types";
-import peer from "../app/web-rtc/peer";
+import declares from "app/@types";
+import peer from "app/web-rtc/peer";
 import chalk from "chalk";
-import {Schedule} from "../vendor/core/schedule/schedule";
+import {Schedule} from "vendor/core/schedule/schedule";
 import {boolean} from "yargs";
 
 const app = express()

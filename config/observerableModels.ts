@@ -1,4 +1,4 @@
-import db from '../app/models/sequelize'
+import db from 'app/models/sequelize'
 
 let observerableModels: any = [
     db.User

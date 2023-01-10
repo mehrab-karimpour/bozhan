@@ -1,4 +1,4 @@
-import ResponseAbstract from "../responseAbstract";
+import ResponseAbstract from "app/services/response/responseAbstract";
 import {Request, Response} from "express";
 
 export default class Json extends ResponseAbstract {

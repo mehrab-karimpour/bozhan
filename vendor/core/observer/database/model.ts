@@ -1,4 +1,4 @@
-import Observer from './Observer'
+import Observer from 'vendor/core/observer/database/Observer'
 
 interface Model {
     attach(observer: Observer): void;

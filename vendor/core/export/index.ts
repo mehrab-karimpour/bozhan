@@ -1,4 +1,4 @@
-import {Container} from "../../../app/providers/AppContainer"
+import {Container} from "app/providers/AppContainer"
 
 const fastcsv = require("fast-csv")
 const fs = require("fs")

@@ -1,12 +1,12 @@
-import Auth from "../../../vendor/core/Auth";
+import Auth from "vendor/core/Auth";
 
 import _ from 'lodash'
 import jwt from "jsonwebtoken";
-import appConfig from "../../../config/app";
+import appConfig from "config/app";
 import crypto from "crypto";
 import {Request} from "express";
-import db from "../../models/sequelize";
-import AuthCache from "../../../vendor/core/cache/authCache";
+import db from "app/models/sequelize";
+import AuthCache from "vendor/core/cache/authCache";
 
 
 class Jwt implements Auth {

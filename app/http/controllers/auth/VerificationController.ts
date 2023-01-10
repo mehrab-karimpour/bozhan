@@ -1,4 +1,4 @@
-import {Controller} from "../controller";
+import {Controller} from "app/http/controllers/controller";
 import {NextFunction, Request, Response} from "express";
 
 

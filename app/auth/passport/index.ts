@@ -1,5 +1,5 @@
 import passport from "passport";
-import User from "../../models/mongoose/user";
+import User from "app/models/mongoose/user";
 import bcrypt from "bcryptjs";
 
 const LocalStrategy = require('passport-local').Strategy

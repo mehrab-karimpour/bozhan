@@ -1,6 +1,6 @@
 import {Request, Response} from "express"
-import AppResponse from "../../services/response/response";
-import {injectableServiceProvider} from "../../providers/injectableServiceProvider";
+import AppResponse from "app/services/response/response";
+import {injectableServiceProvider} from "app/providers/injectableServiceProvider";
 
 const autoBind = require('auto-bind')
 

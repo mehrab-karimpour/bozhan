@@ -1,6 +1,6 @@
 import {BaseRepository} from "./BaseRepository";
-import db from '../../models/sequelize';
-import RolePermissionRepositoryInterface from "../RolePermissionRepositoryInterface";
+import db from 'app/models/sequelize';
+import RolePermissionRepositoryInterface from "app/repositories/RolePermissionRepositoryInterface";
 
 
 export class RolePermissionRepository extends BaseRepository implements RolePermissionRepositoryInterface {

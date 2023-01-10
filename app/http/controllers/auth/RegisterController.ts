@@ -1,7 +1,7 @@
-import {Controller} from "../controller";
+import {Controller} from "app/http/controllers/controller";
 import {NextFunction, Request, Response} from "express";
-import {UserRepository} from "../../../repositories/Sequelize/UserRepository";
-import {injectableServiceProvider} from "../../../providers/injectableServiceProvider";
+import {UserRepository} from "app/repositories/Sequelize/UserRepository";
+import {injectableServiceProvider} from "app/providers/injectableServiceProvider";
 import crypto from "crypto";
 
 export {}

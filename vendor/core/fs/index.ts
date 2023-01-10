@@ -1,6 +1,6 @@
 import multer from "multer";
 import {Request} from "express";
-import {Container} from "../../../app/providers/AppContainer";
+import {Container} from "app/providers/AppContainer";
 import fs from "fs";
 
 

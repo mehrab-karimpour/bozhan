@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import databaseConfig from "../../../config/database";
+import databaseConfig from "config/database";
 
 
 mongoose.Promise = global.Promise;

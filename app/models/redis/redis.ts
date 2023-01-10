@@ -1,5 +1,5 @@
 import {createClient} from 'redis';
-import logger from "../../../config/logger";
+import logger from "config/logger";
 
 
 class redis {
