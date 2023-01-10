@@ -12,7 +12,7 @@ const cookieParser = require('cookie-parser')
 const flash = require('connect-flash')
 const passport = require('passport')
 require('dotenv').config({
-    path: appConfig.envPath()
+    path: appConfig.appPath + '/.env'
 })
 const session = require('express-session')
 const routeCache = require('route-cache')
@@ -69,7 +69,7 @@ class Index {
             let actives: string = ''
             actives += ` ${process.env.ACTIVE_MONGODB == 'true' ? 'mongo' : ''} `
             actives += ` ${process.env.ACTIVE_REDIS == 'true' ? 'redis ' : ''}`
-            actives += ` ${process.env.ACTIVE_RELATION == 'true' ? process.env.DB_DIALECT +' ' : ''}`
+            actives += ` ${process.env.RELATION_BE_ACTIVE == 'true' ? process.env.DB_DIALECT + ' ' : ''}`
             actives += ` ${process.env.ACTIVE_ELASTIC == 'true' ? 'elastic  ' : ''}`
             console.log(chalk.cyan(actives))
             console.log(chalk.cyan(`--------------------------------------- `))

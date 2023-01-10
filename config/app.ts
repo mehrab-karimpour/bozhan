@@ -1,18 +1,14 @@
 import 'dotenv'
 
 const appConfig = {
+    appEnv: 'production',
     apiBase: process.env.HAS_API_BASE || false,
     port: process.env.APP_PORT || 5000,
     host: process.env.HOST || "localhost",
     secretKey: process.env.SECRET_KEY || 'bozhan',
-    envPath: function () {
-        let currentPath: any = __dirname.split('/')
-        delete currentPath[currentPath.length - 1]
-        delete currentPath[currentPath.length - 2]
-        currentPath = currentPath.join('/')
-        currentPath = currentPath.slice(0, -1)
-        return currentPath + '.env';
-    }
+    appPath: '/home/oem/dev/production/bozhan',
+    sequelizeConfigDevelopment: '/home/oem/dev/production/bozhan/config/sequelize.ts',
+    sequelizeConfigProduction: '/home/oem/dev/production/bozhan/build/config/sequelize.js',
 }
 
 export default appConfig
