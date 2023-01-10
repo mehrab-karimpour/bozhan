@@ -9,7 +9,7 @@ dependencies :
 - typescript
 
 
-for develop bozhan framework run this commands :
+development mode :
 
 - git clone  https://github.com/mehrabkarimpour-dev/bozhan.git
 
@@ -21,7 +21,17 @@ for develop bozhan framework run this commands :
 
 - npm run dev
 
+production (deploy) mode :
 
+before deploy or using production mode change the following file :
+config/app.ts  and then set this parameters :
+
+1- appPath
+2- sequelizeConfigDevelopment
+3- sequelizeConfigProduction
+    and set the appEnv to 'production'
+
+sh release.sh
 ______________________________________
 documentation : 
 [getbozhan.com](https://getbozhan.com/).
