@@ -15,7 +15,7 @@ development mode :
 
 - cd bozhan
 
-- cp .env.example .env   // in windows => copy .env.example .env
+- cp .env.example .env
 
 - npm install 
 
