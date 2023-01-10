@@ -1,13 +1,7 @@
 # bozhan
 
 BOZHAN framework
-
-dependencies : 
-- nodejs 
-- redis ( if you want using queue system )
-- npm
-- typescript
-
+dependencies : , nodejs , redis ( if you want using queue system ) , npm , typescript
 
 development mode :
 
