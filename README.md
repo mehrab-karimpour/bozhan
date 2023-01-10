@@ -20,9 +20,9 @@ production (deploy) mode :
 before deploy or using production mode change the following file :
 config/app.ts  and then set this parameters :
 
-1- appPath
-2- sequelizeConfigDevelopment
-3- sequelizeConfigProduction
+- appPath
+- sequelizeConfigDevelopment
+- sequelizeConfigProduction
     and set the appEnv to 'production'
 
 sh release.sh
