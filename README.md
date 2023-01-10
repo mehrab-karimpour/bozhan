@@ -5,27 +5,29 @@ dependencies : , nodejs , redis ( if you want using queue system ) , npm , types
 
 development mode :
 
-- git clone  https://github.com/mehrab-karimpour/bozhan.git
+- <pre>git clone  https://github.com/mehrab-karimpour/bozhan.git</pre>
 
-- cd bozhan
+- <pre>  cd bozhan </pre>
 
-- cp .env.example .env
+- <pre>  cp .env.example .env </pre>
 
-- npm install 
+- <pre>npm install </pre>
 
-- npm run dev
+- <pre>npm run dev</pre>
 
 production (deploy) mode :
 
 before deploy or using production mode change the following file :
 config/app.ts  and then set this parameters :
 
+- <pre> nano sh release.sh </pre>
+
 - appPath
 - sequelizeConfigDevelopment
 - sequelizeConfigProduction
     and set the appEnv to 'production'
 
-sh release.sh
+ - <pre> sh release.sh </pre>
 ______________________________________
 documentation : 
 [getbozhan.com](https://getbozhan.com/).
