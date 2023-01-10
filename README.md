@@ -12,15 +12,6 @@ development mode :
 - <pre>npm run dev</pre>
 
 production (deploy) mode :
-
-before deploy or using production mode change the following file :
-config/app.ts  and then set this parameters :
-
-- <pre> nano sh release.sh </pre>
-- appPath
-- sequelizeConfigDevelopment
-- sequelizeConfigProduction
-    and set the appEnv to 'production'
  - <pre> sh release.sh </pre>
 ______________________________________
 documentation : 
