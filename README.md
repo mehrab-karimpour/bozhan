@@ -11,7 +11,7 @@ dependencies :
 
 development mode :
 
-- git clone  https://github.com/mehrabkarimpour-dev/bozhan.git
+- git clone  https://github.com/mehrab-karimpour/bozhan.git
 
 - cd bozhan
 
