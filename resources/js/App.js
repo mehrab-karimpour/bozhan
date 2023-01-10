@@ -1,4 +1,3 @@
-import Index from "./screens/home/Index";
 
 
 
@@ -7,7 +6,7 @@ const App = () => {
     return (
 
         <>
-            <Index/>
+            <h1>hello bozhan</h1>
         </>
     );
 };
