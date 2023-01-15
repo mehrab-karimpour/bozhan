@@ -14,6 +14,7 @@ else
   git reset --hard HEAD
   git clean -fd
   git pull
+  npm i
   pm2IsInstalled=$(npm ls -g | grep pm2)
   countOfPm2IsInstalledString=${#pm2IsInstalled}
 
