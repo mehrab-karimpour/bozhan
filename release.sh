@@ -11,9 +11,13 @@ if [ $line != $mode ]; then
   echo ""
 else
   echo "-- The application is in production mode --"
-  git reset --hard HEAD
-  git clean -fd
-  git pull
+  printf " Question : do you want remove all local changes and pull last changes from online repo ? y/n : "
+  read answer
+  if [ "$answer" != "${answer#[Yy]}" ]; then
+    git reset --hard HEAD
+    git clean -fd
+    git pull
+  fi
   npm i
   pm2IsInstalled=$(npm ls -g | grep pm2)
   countOfPm2IsInstalledString=${#pm2IsInstalled}
@@ -37,5 +41,3 @@ else
 
   pm2 start build/server.js --watch
 fi
-
-
