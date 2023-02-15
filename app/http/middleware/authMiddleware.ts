@@ -2,6 +2,7 @@ import {NextFunction, Request, Response} from "express"
 import {setAuth} from "vendor/core/autoload/auth"
 import jwt from "jsonwebtoken"
 import appConfig from "config/app"
+import {declareRequest} from "app/@types";
 
 
 export class AuthMiddleware {
@@ -28,7 +29,7 @@ export class AuthMiddleware {
      * @param next
      * @author mehrab karimpour
      */
-    public async run(req: Request, res: Response, next: NextFunction) {
+    public async run(req: declareRequest, res: Response, next: NextFunction) {
 
         if (req.headers.authorization && req.headers?.authorization?.split('Bearer')[1]) {
             try {

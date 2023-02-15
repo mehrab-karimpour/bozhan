@@ -3,6 +3,7 @@ import AuthCache from "vendor/core/cache/authCache";
 import db from "app/models/sequelize";
 import Middleware from "./Middleware";
 import {Auth} from "vendor/core/autoload/auth";
+import {declareRequest} from "../../@types";
 
 
 export class RoleMiddleware {
@@ -45,8 +46,7 @@ export class RoleMiddleware {
      * @param res
      * @param next
      */
-    public async run(req: Request, res: Response, next: NextFunction) {
-        // @ts-ignore
+    public async run(req: declareRequest, res: Response, next: NextFunction) {
         if (!req.auth) return Middleware.needAuth(req, res)
 
         await RoleMiddleware.hasRole(req)

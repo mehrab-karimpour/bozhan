@@ -2,6 +2,7 @@ import {NextFunction, Request, Response} from "express";
 import AuthCache from "vendor/core/cache/authCache";
 import db from "app/models/sequelize";
 import Middleware from "./Middleware";
+import {declareRequest} from "../../@types";
 
 
 export class PermissionMiddleware extends Middleware {
@@ -48,9 +49,9 @@ export class PermissionMiddleware extends Middleware {
      * @param res
      * @param next
      */
-    public async run(req: Request, res: Response, next: NextFunction) {
+    public async run(req: declareRequest, res: Response, next: NextFunction) {
 
-        // @ts-ignore
+
         if (!req.auth) return Middleware.needAuth(req, res)
 
         await PermissionMiddleware.hasPermission(req)

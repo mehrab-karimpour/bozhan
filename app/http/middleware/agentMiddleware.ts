@@ -1,4 +1,5 @@
 import {NextFunction, Request, Response} from 'express'
+import {declareRequest} from "app/@types";
 
 
 export class agentMiddleware {
@@ -22,7 +23,7 @@ export class agentMiddleware {
      * @param res
      * @param next
      */
-    public async run(req: Request, res: Response, next: NextFunction) {
+    public async run(req: declareRequest, res: Response, next: NextFunction) {
         req.contentType = req.headers['content-type'] ?? 'html'
         return next()
     }

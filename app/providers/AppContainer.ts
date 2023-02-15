@@ -3,6 +3,7 @@ import loginRequest from "app/http/requests/loginRequest";
 import {RoleMiddleware} from "app/http/middleware/roleMiddleware";
 import {PermissionMiddleware} from "app/http/middleware/permissionMiddleware";
 import {agentMiddleware} from "app/http/middleware/agentMiddleware";
+import {CacheMiddleware} from "app/http/middleware/cacheMiddleware";
 
 /**
  * Bozhan container namespace
@@ -22,7 +23,8 @@ export namespace Container {
         loginRequest,
         RoleMiddleware,
         PermissionMiddleware,
-        agentMiddleware
+        agentMiddleware,
+        CacheMiddleware
     ]
     /**
      * jobs

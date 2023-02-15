@@ -1,3 +1,4 @@
+import {declareRequest} from "app/@types";
 export {}
 import "reflect-metadata"
 import {Request, Response} from "express"
@@ -20,7 +21,8 @@ class IndexController extends Controller {
      * @param req
      * @param res
      */
-    public index = async (req: Request, res: Response) => {
+    public index = async (req: declareRequest, res: Response) => {
+        // return this.response(req, res)
         return this.render(req, res)
     }
 

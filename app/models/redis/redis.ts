@@ -17,14 +17,18 @@ class redis {
         return JSON.stringify(arr)
     }
 
-    public set = async (key: string, value: any) => {
+    public set = async (key: string, value: any, params: {} | undefined = undefined) => {
         this.client.on('error', (err: any) => {
             logger.error(err)
             console.log('Redis Client Error', err)
         });
         if (typeof value === "object")
             value = this._arrayToJson(value)
-        await this.client.set(key, value)
+
+        if (params)
+            await this.client.set(key, value, params)
+        else
+            await this.client.set(key, value)
     }
 
     public del = async (key: string) => {

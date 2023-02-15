@@ -1,28 +1,15 @@
-import express, {NextFunction, Request, request, Response, response} from 'express';
+import {NextFunction, Request} from 'express';
 
-
-declare global {
-    namespace Express {
-        interface Request {
-            auth: object | null | Array<object>,
-            contentType: string,
-            agentView: string,
-            userAgent: string
-        }
-    }
-}
-
-declare global {
-    namespace P {
-        interface BaseLogger {
-            error: any
-        }
-    }
+export interface declareRequest extends Request {
+    auth: object | null | Array<object>,
+    contentType: string,
+    agentView: string,
+    cacheEnable: boolean | string,
+    userAgent: string
 }
 
 const declares = (app: any) => {
-    return app.use((req: Request, res: Response, next: NextFunction) => {
-        req.auth = null
+    return app.use((req: declareRequest, res: Response, next: NextFunction) => {
         next();
     });
 }

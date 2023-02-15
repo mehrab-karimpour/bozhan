@@ -17,6 +17,11 @@ router.prefix('/', (route: any) => {
     * you can define role permission in database or redis
     * */
 
+    // route.get('/test',
+    //     middleware('agent'),
+    //     middleware('cache','testPage,20'),
+    //     controller(IndexController, 'index', 'home'))
+
     route.get('/',
         middleware('agent'),
         controller(IndexController, 'index', 'home'))
