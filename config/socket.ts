@@ -20,7 +20,7 @@ export const wbConfig: any = {
         // See zlib defaults.
         chunkSize: process.env.WB_CHUNK_SIZE || 1024,
         memLevel: process.env.WB_MEM_LEVEL || 7,
-        level:process.env.level || 3
+        level:process.env.WB_LEVEL || 3
     },
 
     zlibInflateOptions: {
