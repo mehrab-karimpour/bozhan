@@ -1,6 +1,6 @@
 'use strict';
 
-import appConfig from "../../../config/app";
+import appConfig from "config/app";
 
 const fs = require('fs');
 const path = require('path');
