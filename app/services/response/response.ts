@@ -2,6 +2,7 @@ import {Request, Response} from "express";
 import Html from "./parts/html";
 import Json from "./parts/json";
 import Xml from "./parts/xml";
+import {declareRequest} from "../../@types";
 
 export default class AppResponse {
 
@@ -11,7 +12,7 @@ export default class AppResponse {
         Xml
     ]
 
-    public response(req: Request, res: Response, ...data: any) {
+    public response(req: declareRequest, res: Response, ...data: any) {
         this.responses?.map((_response: any) => {
             let _objResponse = new _response()
             if (_objResponse.type === req.contentType) {
