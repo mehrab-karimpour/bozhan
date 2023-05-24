@@ -138,7 +138,7 @@ class Index {
     }
 
     public setAppConfig() {
-        app.use(express.static('./'))
+        app.use(express.static('./public/static/'))
         app.set('view engine', 'ejs')
         app.set('views', './resources/views')
         app.use(express.json())

@@ -3,3 +3,4 @@
 .env
 storage/logs/*.log
 ./index.ts
+/public/static
