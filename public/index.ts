@@ -6,6 +6,7 @@ import bodyParser from "body-parser"
 import appConfig from "config/app"
 import databaseConfig from 'config/database'
 import Passport from "app/auth/passport"
+import rateLimit from 'express-rate-limit'
 import Queue from 'bull';
 
 const cookieParser = require('cookie-parser')
@@ -39,15 +40,18 @@ import peer from "app/web-rtc/peer";
 import chalk from "chalk";
 import {Schedule} from "vendor/core/schedule/schedule";
 import {boolean} from "yargs";
+import * as process from "process";
 
 const app = express()
 
 class Index {
 
     public expressApp: any
+    public limiter: any
 
 
     constructor() {
+        this.rateLimitConfig()
         this.setCli()
         this.setSchedule()
         this.setExpressConfig()
@@ -60,8 +64,18 @@ class Index {
         this.setEventConfig()
         this.setWebRtcConfig()
         this.activeServices()
+
     }
 
+    public rateLimitConfig() {
+        let minutes: number = parseInt(process.env.RATE_LIMIT_MINUTES ?? "1")
+        let maxRequestHandlePerMinute: number = parseInt(process.env.RATE_LIMIT_MAX_REQUEST_PER_MINUTE ?? "480")
+
+        this.limiter = rateLimit({
+            windowMs: minutes * 60 * 1000,
+            max: maxRequestHandlePerMinute
+        })
+    }
 
     public activeServices() {
         setTimeout(() => {
@@ -142,6 +156,7 @@ class Index {
         app.set('view engine', 'ejs')
         app.set('views', './resources/views')
         app.use(express.json())
+        app.use(this.limiter)
         //app.set("layout extractScripts", true)
         // app.set("layout extractStyles", true)
         // app.set("layout", "layouts/home")

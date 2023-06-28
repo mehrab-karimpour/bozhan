@@ -78,6 +78,7 @@
     "express-jwt": "^6.1.0",
     "express-namespace-routes": "^0.0.3",
     "express-pino-logger": "^6.0.0",
+    "express-rate-limit": "^6.7.0",
     "express-recaptcha": "^5.0.2",
     "express-session": "^1.17.2",
     "express-validator": "^6.12.2",
