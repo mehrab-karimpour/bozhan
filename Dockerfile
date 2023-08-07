@@ -1,6 +1,6 @@
 FROM node:18-alpine
 WORKDIR /
 COPY . .
-RUN yarn install --production
-CMD ["node", "build/server.js"]
+RUN npm install pm2 -g
+CMD ["pm2-runtime", "build/server.js"]
 EXPOSE 5000

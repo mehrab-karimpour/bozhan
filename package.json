@@ -205,6 +205,7 @@
     "production": "mix --production",
     "watch": "mix watch",
     "start": "node build/server.js",
+    "pm2-start": "pm2 start build/server.js --watch",
     "dev": "ts-node-dev  --watch .env  --respawn server.ts"
   },
   "keywords": [],

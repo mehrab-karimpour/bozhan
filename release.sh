@@ -22,6 +22,9 @@ else
   printf " Question-2 : do you want running app on local machine or docker container (l:local d:docker default:L) ? L/d : "
   read answer
   if [ "$answer" != "${answer#[Dd]}" ]; then
+    rm -rf ./app/@types/*/
+    rm -rf ./build
+    npm run build
     docker build -t bozhan .
     docker run -dp 5000:5000 bozhan
 
