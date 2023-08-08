@@ -1,9 +1,9 @@
 export {}
-import "reflect-metadata";
-
-
 require('app-module-path').addPath(__dirname)
 
-import App from 'public/index';
+import "reflect-metadata";
+import App from './public/index';
 
-new App()
+const app = new App()
+
+export default app.expressApp
