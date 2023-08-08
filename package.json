@@ -106,7 +106,7 @@
     "mime": "^1.6.0",
     "mime-db": "^1.49.0",
     "mime-types": "^2.1.32",
-    "moment": "^2.29.1",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.34",
     "mongodb-connection-string-url": "^2.1.0",
     "mongoose": "^6.0.9",
