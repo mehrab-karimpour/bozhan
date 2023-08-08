@@ -1,0 +1,39 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bozhan
+    restart: unless-stopped
+    container_name: bozhan
+    env_file: .env
+    environment:
+      - APP_PORT=$APP_PORT
+      - DB_HOST=db
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    networks:
+      - app-network
+  db:
+    image: mariadb
+    container_name: mysql
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - DB_HOST=$DB_HOST
+      - DB_DIALECT=mysql
+      - DB_DATABASE=$DB_DATABASE
+      - DB_USER=$DB_USER
+      - DB_PASSWORD=$DB_PASSWORD
+    ports:
+      - "3306:3306"
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+networks:
+  app-network:
+    driver: bridge

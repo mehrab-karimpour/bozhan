@@ -25,8 +25,9 @@ else
     rm -rf ./app/@types/*/
     rm -rf ./build
     npm run build
-    docker build -t bozhan .
-    docker run -dp 5000:5000 bozhan
+    docker compose down
+    docker image rm -f bozhan
+    docker compose up -d  --build --force-recreate
 
   else
     pm2IsInstalled=$(npm ls -g | grep pm2)

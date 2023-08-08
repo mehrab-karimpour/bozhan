@@ -4,3 +4,5 @@
 storage/logs/*.log
 ./index.ts
 /public/static
+/build
+/app/@types/*
