@@ -19,7 +19,7 @@ const session = require('express-session')
 const routeCache = require('route-cache')
 
 import Config from "vendor/config/Config"
-import http from 'http'
+import http, {Server} from 'http'
 import webRouter from 'route/web/index'
 import apiRouter from 'route/api/index'
 import {config} from "dotenv"
@@ -46,7 +46,7 @@ const app = express()
 
 class Index {
 
-    public expressApp: any
+    public expressApp: Server | any
     public limiter: any
 
 

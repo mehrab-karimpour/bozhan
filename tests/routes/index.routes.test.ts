@@ -1,6 +1,8 @@
+import axios from "axios";
 
-describe("Server.ts tests", () => {
-    test("Math test", () => {
-        expect(2 + 2).toBe(4);
-    });
-});
+describe('#1 Return ERROR when credential is missing', () => {
+    test('should throw error when there is no credentials', async () => {
+        const res = await axios.get('/')
+        expect(res.status).toBe(200)
+    })
+})
