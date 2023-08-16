@@ -41,6 +41,7 @@ import chalk from "chalk";
 import {Schedule} from "vendor/core/schedule/schedule";
 import {boolean} from "yargs";
 import * as process from "process";
+import {errorLogger, errorResponder, requestLogger} from "app/eroors";
 
 const app = express()
 
@@ -55,15 +56,16 @@ class Index {
         this.setCli()
         this.setSchedule()
         this.setExpressConfig()
+        this.setRoutersConfig()
         this.setAppConfig()
         this.setDatabaseConfig()
-        this.setRoutersConfig()
         this.setWebSocketConfig()
         this.setGraphQl()
         this.setQueueJob()
         this.setEventConfig()
         this.setWebRtcConfig()
         this.activeServices()
+
 
     }
 
@@ -149,6 +151,7 @@ class Index {
     public setRoutersConfig() {
         app.use(webRouter, routeCache.cacheSeconds(24 * 60 * 60 * 60, process.env.APP_KEY || 'app_key'))
         // app.use('/api', apiRouter)
+
     }
 
     public setAppConfig() {
@@ -156,6 +159,11 @@ class Index {
         app.set('view engine', 'ejs')
         app.set('views', './resources/views')
         app.use(express.json())
+        app.use(requestLogger)
+        app.use(errorLogger)
+        app.use(errorResponder)
+
+
         app.use(this.limiter)
         //app.set("layout extractScripts", true)
         // app.set("layout extractStyles", true)
