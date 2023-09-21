@@ -15,6 +15,7 @@ services:
       - "5000:5000"
     depends_on:
       - db
+      - redis
     networks:
       - app-network
   db:
@@ -36,4 +37,3 @@ services:
       - "6379:6379"
 networks:
   app-network:
-    driver: bridge
