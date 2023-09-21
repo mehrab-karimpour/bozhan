@@ -14,8 +14,15 @@ development mode :
 production (deploy) mode :
  - <pre> sh release.sh </pre>
 ______________________________________
-documentation : 
-[getbozhan.com](https://getbozhan.com/).
+
+requirement in production using docker :
+- <b>docker</b>
+- <b>docker compose</b>
+- <b>docker swarm (init token)</b>
+______________________________________
+
+[//]: # (documentation : )
+[//]: # ([getbozhan.com]&#40;https://getbozhan.com/&#41;.)
 
 
             

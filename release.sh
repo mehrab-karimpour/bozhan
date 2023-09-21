@@ -28,6 +28,10 @@ else
     docker compose down
     docker image rm -f bozhan
     docker compose up -d  --build --force-recreate
+    docker service rm bozhan-app-service_app
+    docker service rm bozhan-app-service_db
+    docker service rm bozhan-app-service_redis
+    docker stack deploy -c docker-compose.yml bozhan-app-service
 
   else
     pm2IsInstalled=$(npm ls -g | grep pm2)
