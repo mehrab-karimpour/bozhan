@@ -27,7 +27,7 @@ else
     npm run build
     docker compose down
     docker image rm -f bozhan
-    docker compose up -d  --build --force-recreate
+    docker compose up -d --build --force-recreate
     docker service rm bozhan-app-service_app
     docker service rm bozhan-app-service_db
     docker service rm bozhan-app-service_redis
@@ -54,7 +54,16 @@ else
 
     npm run build
 
-    pm2 start build/server.js --watch
+    printf " Question : do you wish run bozhan with bun or node ? N/b : "
+    read runEnvAnswer
+    if [ "$runEnvAnswer" != "${runEnvAnswer#[Nn]}" ]; then
+      pm2 start build/server.js --watch
+      echo "running with node"
+    else
+      echo "running with bun):"
+      pm2 start "bun build/server.js" --watch
+    fi
+
   fi
 
 fi
